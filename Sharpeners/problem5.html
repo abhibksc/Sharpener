@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0">
+    <div id="header" style="padding: 1rem 0; background-color: lightblue">
+      <h1 id="main-heading" style="margin: 0">Fruit Shop</h1>
+    </div>
+    <div>
+      <h2 id="basket-heading">Fruits In Basket</h2>
+      <ul class="fruits">
+        <li class="fruit">Banana</li>
+        <li class="fruit">Apple</li>
+        <li class="fruit">Orange</li>
+        <li class="fruit">Kiwi</li>
+      </ul>
+    </div>
+    <div id="thanks"></div>
+  </body>
+  <style>
+    /* h3{
+        font-style: italic;
+    } */
+  </style>
+  <script>
+
+const h3 = document.createElement("h3");
+    const addText = document.createTextNode("Buy high-quality organic fruits online");
+
+    h3.appendChild(addText);
+
+    document.querySelector("#header").appendChild(h3).style.fontStyle = 'italic';
+
+    const para = document.createElement("p");
+    const addText2 = document.createTextNode("Total fruits: 4");
+
+    para.appendChild(addText2);
+
+    const secondDiv = document.querySelectorAll("div")[1];
+    const unorderedList = secondDiv.querySelector(".fruits");
+
+ 
+    secondDiv.insertBefore(para, unorderedList);
+
+    document.querySelectorAll("div")[1].querySelector("p").id = "fruits-total"
+    
+    
+    
+    
+    
+
+
+  </script>
+</html>

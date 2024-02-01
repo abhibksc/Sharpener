@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <title></title>
+</head>
+
+<style>
+    #h1-t {
+        font-weight: bolder;
+        font-size: larger;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+
+<body class="p-3" style="min-height: 100vh;">
+
+    <form class="container  text-bg-danger p-3 rounded border d-flex flex-column justify-content-between" id="form-1">
+        <h1 class="text-center" id="h1-t">Expense Tracker</h1>
+        <div class="m-0 p-3 d-flex flex-row justify-content-between text-bg-info rounded border ">
+            <div class="p-0 m-3">
+                <label for="exampleFormControlInput" class="form-label" id="exampleFormControlInput1">Choose Experiment
+                    <input type="number" class="form-control" id="expense-amount" placeholder="Expenses"
+                        aria-label="Username"></label>
+            </div>
+            <div class="p-0 m-3">
+                <label for="exampleFormControlTextarea1" class="form-label" id="exampleFormControlInput2">Description
+                    <input type="text" class="form-control" id="Description" placeholder="Description"
+                        aria-label="Username"></label>
+            </div>
+            <div class="p-0 m-3">
+                <label for="exampleFormControlSelect" class="form-label" id="exampleFormControlSelect2">Choose a category :
+                    <select class="form-control" id="category">
+                        <option value="Rent">Rent</option>
+                        <option value="Movie">Movie</option>
+                        <option value="Fuel">Fuel</option>
+                        <option value="Food">Food</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Party">Party</option>
+                        <option value="Others">Others</option>
+                    </select></label>
+            </div>
+        </div>
+        <div class="p-0 m-3 text-center"><button type="submit" class="btn btn-dark" id="Add-Expense">Add Expense</button></div>
+
+    </form>
+
+    <div class="container  text-bg-light rounded border d-flex flex-column justify-content-between">
+        <ul>
+
+        </ul>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

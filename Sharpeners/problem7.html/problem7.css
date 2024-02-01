@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 25px; /* Set padding to 25px */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: pink; /* Change background color to pink */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-style: italic; /* Change font style to italic */
+  }
+  
+  input#name {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    height: 25px; /* Set height to 25px */
+  }
+  
+  button.btn {
+    padding: 10px; /* Set padding to 10px on all sides */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px; /* Set top margin to 25px */
+  }
+  
+  button.btn[type="reset"] {
+    background-color: #f44336;
+    margin-left: 10px;
+  }
+  
+  button.btn:hover {
+    background-color: #45a049;
+  }
+  
+  button.btn[type="reset"]:hover {
+    background-color: #d32f2f;
+  }
+  

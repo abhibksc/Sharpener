@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="margin: 0">
+  <div id="header" style="padding: 1rem; background-color: lightblue">
+    <h1 id="main-heading" style="margin: 0">Fruit Shop</h1>
+    <input id="filter" type="text" placeholder="Search fruits..." />
+  </div>
+  <div>
+    <form>
+      <h2 id="basket-heading">Add Fruits</h2>
+      <input type="text" name="fruit" id="fruit-to-add" />
+      <button type="submit">Add</button>
+    </form>
+    <ul class="fruits">
+      <li class="fruit">Banana<button class="delete-btn">x</button></li>
+      <li class="fruit">Apple<button class="delete-btn">x</button></li>
+      <li class="fruit">Orange<button class="delete-btn">x</button></li>
+      <li class="fruit">Kiwi<button class="delete-btn">x</button></li>
+    </ul>
+  </div>
+  <div id="thanks"></div>
+</body>
+<style>
+  #header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+  }
+
+  #header input {
+    width: 30%;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  form {
+    margin: 30px;
+    width: 100%;
+  }
+
+  form input {
+    height: 35px;
+    width: 40%;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  form button {
+    height: 40px;
+    width: 10%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: yellowgreen;
+  }
+
+  ul {
+    list-style-type: none;
+    background-color: pink;
+    padding: 5px;
+    margin: 0 30px;
+    width: 50%;
+    border-radius: 5px;
+  }
+
+  li {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+    background-color: tomato;
+    border: none;
+    border-radius: 2px;
+    padding: 5px 18px;
+  }
+
+  .edit-btn {
+    align-self: flex-end;
+    background-color: lightblue;
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    margin-top: 5px;
+  }
+</style>
+<script>
+
+
+  const form = document.querySelector('form');
+  const fruits = document.querySelector('.fruits');
+
+  const li = document.querySelectorAll(".fruit");
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const fruitToAdd = document.getElementById('fruit-to-add')
+    const newLi = document.createElement('li')
+    newLi.setAttribute("className" , "fruit")
+    const newLiText = document.createTextNode(fruitToAdd.value)
+    newLi.appendChild(newLiText)
+    document.querySelector("ul").appendChild(newLi);
+  });
+
+
+
+li.forEach(function (li) {
+    const newtag = document.createElement("button");
+    newtag.setAttribute("class", "edit-btn");
+
+    newtag.innerHTML = "Edit";
+
+    li.appendChild(newtag);
+
+})
+
+const del = document.querySelectorAll(".delete-btn")
+
+
+
+del.forEach(function(d){
+    d.addEventListener('click', function(i){
+        let removeIt = i.target.parentNode
+        removeIt.remove();
+    })
+})
+
+</script>
+
+</html>
