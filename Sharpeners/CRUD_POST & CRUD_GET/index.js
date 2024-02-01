@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function post(obj) {
-    axios.post(`https://crudcrud.com/api/f9817db1f14c4ed8a16157fdde9da08f/BookingAppointment`, obj)
+    axios.post(`https://crudcrud.com/api/d7736eadb1a841818687392b869d61c4/BookingAppointment`, obj)
         .then((res) => {
             newUser(res.data)
         })
@@ -34,7 +34,7 @@ function post(obj) {
 
 function get() {
 
-    axios.get(`https://crudcrud.com/api/f9817db1f14c4ed8a16157fdde9da08f/BookingAppointment`)
+    axios.get(`https://crudcrud.com/api/d7736eadb1a841818687392b869d61c4/BookingAppointment`)
         .then((res) => {
             res.data.forEach(element => {
                 newUser(element)
@@ -43,7 +43,7 @@ function get() {
         .catch((error) => {
             console.log(error);
         })
-        
+
 }
 
 
@@ -72,7 +72,7 @@ function delBtn(data) {
     del_btn.addEventListener('click', function (event) {
         event.preventDefault();
         const del = data._id;
-        axios.delete(`https://crudcrud.com/api/f9817db1f14c4ed8a16157fdde9da08f/BookingAppointment/${del}`)
+        axios.delete(`https://crudcrud.com/api/d7736eadb1a841818687392b869d61c4/BookingAppointment/${del}`)
         const target = event.target.parentNode;
         target.remove();
 
@@ -88,13 +88,27 @@ function Edit_btn(data) {
     edit_btn.addEventListener('click', (event) => {
         event.preventDefault();
 
+        document.querySelector("#username").value = data.name;
+        document.querySelector("#email").value = data.email;
+        document.querySelector("#phone").value = data.phonenumber;
+
         const target = event.target.parentNode;
         target.remove();
 
 
-        document.querySelector("#username").value = data.name;
-        document.querySelector("#email").value = data.email;
-        document.querySelector("#phone").value = data.phonenumber;
+        const newData = {
+            names: data.name,
+            emails: data.email,
+            phonenumbers: data.phonenumber
+        };
+        
+
+        const edit = data._id;
+        axios.delete(`https://crudcrud.com/api/d7736eadb1a841818687392b869d61c4/BookingAppointment/${edit}`)
+        post(newData.data);
+
+
+
     })
 
     return edit_btn;
