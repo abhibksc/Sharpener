@@ -47,9 +47,6 @@ function get() {
 }
 
 
-
-
-
 function newUser(data) {
     const li = newLi(data);
     const del = delBtn(data);
@@ -74,8 +71,8 @@ function delBtn(data) {
 
     del_btn.addEventListener('click', function (event) {
         event.preventDefault();
-
-
+        const del = data._id;
+        axios.delete(`https://crudcrud.com/api/f9817db1f14c4ed8a16157fdde9da08f/BookingAppointment/${del}`)
         const target = event.target.parentNode;
         target.remove();
 
