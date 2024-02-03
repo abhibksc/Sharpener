@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>            
+    <title>Todo List</title> 
+    <link rel="stylesheet" href="Todoindex.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">          
 </head>
-<body>
-<div>
-    <div>
+<body class="bg-light-subtle" style="font-family: cursive">
+    <h1 class="h1">TODO LIST</h1>
+<div class="div1 d-flex flex-column mb-3 bg-primary border border-warning-subtle">
+    <div class="div2 m-3 p-3 d-flex justify-content-center">
         <label>Todo Name</label>
         <input type="text" id="TodoName">
         <label>Description</label>
         <input type="text" id="Description">
-        <button id="add-btn">Add Item</button>
+        <button id="add-btn" class="btn btn-secondary">Add Item</button>
     </div>
-    <div>
+    <div class="m-1 d-flex justify-content-around">
         <div>
             <h1>Todo-Remaining</h1>
             <ul id="Todo-Remaining"></ul>
@@ -32,5 +35,6 @@
 
 <script src="Todoindex.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
