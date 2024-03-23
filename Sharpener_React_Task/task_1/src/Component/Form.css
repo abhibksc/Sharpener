@@ -1,0 +1,28 @@
+#formid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    background-color: aqua;
+    box-shadow: 0px 0px 9px 1px brown inset;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    padding-top: 5px;
+    box-shadow: 0px 0px 9px 1px rgb(18, 179, 219) inset;
+
+
+}
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e00707;
+    box-shadow: 0px 0px 9px 1px rgb(241, 236, 235) inset;
+
+}
