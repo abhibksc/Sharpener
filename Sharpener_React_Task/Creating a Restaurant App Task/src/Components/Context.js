@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { children, createContext, useState , } from "react";
+import React, {  createContext, useState ,useEffect } from "react";
 
 
 
@@ -7,6 +6,8 @@ export const Context = createContext({});
 
 export const ContextProvider = ({ children }) => {
     const [arr, setArr] = useState([]);
+    const [showCart,  setShowCart] = useState(false);
+
 
     useEffect(()=>{
         setArr(
@@ -63,7 +64,7 @@ export const ContextProvider = ({ children }) => {
 
 
 
-    return <Context.Provider value={{ arr, setArr }}>
+    return <Context.Provider value={{ arr, setArr ,showCart, setShowCart}}>
         {children}
     </Context.Provider>
 }

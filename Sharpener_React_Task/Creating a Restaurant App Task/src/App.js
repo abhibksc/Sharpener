@@ -5,6 +5,8 @@ import Footer from "./Components/Footer/Footer";
 
 
 function App() {
+
+
   return (
     
     <div className="bg-gray-700 flex flex-col h-screen">
@@ -18,3 +20,18 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
