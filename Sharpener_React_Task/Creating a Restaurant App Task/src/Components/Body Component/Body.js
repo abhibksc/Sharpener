@@ -7,9 +7,9 @@ const Body = () => {
 
 
     
-    return <body className="h-full">
+    return <body className="w-screen max-w-10xl">
 
-        <img className="w-screen max-w-full" src="https://www.claridges.co.uk/siteassets/restaurants--bars/artspace-cafe/artspace-cafe-hero-food-1920_720.jpg" alt="img" />
+        <img className="" src="https://www.claridges.co.uk/siteassets/restaurants--bars/artspace-cafe/artspace-cafe-hero-food-1920_720.jpg" alt="img" />
         <div className="absolute bottom-20  left-96 font-serif  text-white bg-gray-800 p-2 flex flex-col gap-5 shadow-2xl rounded-md  w-full max-w-xl mx-auto text-center">
             <h1 className=" font-extrabold text-2xl text-yellow-300">Delicious Food, Delivered To You</h1>
             <div className="flex flex-col  font-sans gap-3">
