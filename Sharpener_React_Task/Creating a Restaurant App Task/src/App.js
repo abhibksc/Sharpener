@@ -1,6 +1,5 @@
 import Header from "./Components/Header Component/Header";
 import Body from "./Components/Body Component/Body";
-import Footer from "./Components/Footer/Footer";
 
 
 
@@ -13,7 +12,6 @@ function App() {
 
         <Header />
         <Body />
-        <Footer/>
 
     </div>
   );

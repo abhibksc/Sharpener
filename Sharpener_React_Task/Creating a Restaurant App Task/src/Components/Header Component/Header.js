@@ -6,7 +6,7 @@ import Cart from '../Cartz/Cart';
 
 
 const Header = ()=>{
-    const { setShowCart} = useContext(Context);
+    const {Cart_Count, setShowCart} = useContext(Context);
 
 
     
@@ -15,11 +15,14 @@ const Header = ()=>{
         <div className="flex justify-around p-2 w-64 mr-32 rounded-full border bg-red-800" onClick={()=>setShowCart(true)}>
             <span><FontAwesomeIcon icon={faShoppingCart}/></span>
             <span className='font-bold'>Your Cart</span>
-            <span className='relative right-8 rounded-xl border px-2'>{0}</span>
+            <span className='relative right-8 rounded-xl border px-2'>{Cart_Count}</span>
         
         </div>
         <Cart/>
     </nav>
+
+
+
 }
 
 export default Header;
