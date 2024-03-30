@@ -1,22 +1,32 @@
-
+import { useEffect } from "react";
 import Cuisines from "./Cuisines";
-
+import SellerForm from "./SellerForm";
+import BuyerForm from "./BuyerForm";
 
 const Body = () => {
 
-    
-    return <body className="w-full max-w-full">
 
-        <img className="" src="https://www.claridges.co.uk/siteassets/restaurants--bars/artspace-cafe/artspace-cafe-hero-food-1920_720.jpg" alt="img" />
-        <div className="absolute bottom-20  left-96 font-serif  text-white bg-gray-800 p-2 flex flex-col gap-5 shadow-2xl rounded-md  w-full max-w-xl mx-auto text-center">
-            <h1 className=" font-extrabold text-2xl text-yellow-300">Delicious Food, Delivered To You</h1>
-            <div className="flex flex-col  font-sans gap-3 ">
-                <p>Choose your favorite meal from our broad selection of available meals and enjoy a delicious lunch or dinner at home.</p>
-                <p>All our meals are cooked with high-quality ingredient, just-in-time and of course by experienced cheifs!</p>
+    return (
+        <main className="w-full max-w-full relative">
+
+            <img className="w-screen max-w-full h-screen max-h-full  shadow-zinc-950 shadow-2xl rounded-lg" src="https://wallpapercave.com/wp/wp8503304.jpg" alt="img" />
+
+            <div className="shoeBlue ">
+                <h1 className="font-bold font-serif text-3xl text-yellow-400 text-opacity-100">"Step into Style, Delivered to Your Doorstep"</h1>
+
+
+                <div className="flex flex-col font-sans  gap-3">
+                    <p>Indulge in the perfect pair from our wide collection of shoes and elevate your fashion game without leaving home.</p>
+                    <p>All our shoes are crafted with premium materials, just-in-time, and of course, by experienced artisans! Discover your perfect fit today."</p>
+                </div>
             </div>
-        </div>
-        <Cuisines/>
-    </body>
+
+            <SellerForm />
+            <BuyerForm/>
+
+            {/* <Cuisines /> */}
+        </main>
+    );
 }
 
 export default Body;
