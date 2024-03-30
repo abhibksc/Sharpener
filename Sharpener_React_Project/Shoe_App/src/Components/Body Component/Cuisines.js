@@ -49,12 +49,7 @@ const Cuisines = () => {
         }
 
 
-        // let total_Money = 0;
-        // for(let i = 0; i<CartItems.length; i++){
-        //     total_Money = total_Money + CartItems[i].total
-        // }
-        // console.log(total_Money);
-        // setBill(total_Money);
+        
     };
 
 
