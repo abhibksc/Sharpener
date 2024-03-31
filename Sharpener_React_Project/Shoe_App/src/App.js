@@ -36,7 +36,7 @@ function App() {
   return (
     
     <div className="bg-slate-900 flex flex-col">
-
+      
         <Header />
         <Body />
         <footer className="text-center bg-white  p-5">

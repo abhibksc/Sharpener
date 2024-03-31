@@ -6,7 +6,7 @@
 
 import { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Context } from '../Context';
+import { Context } from '../ContextAPI.js/Context';
 
 const Cartz = () => {
 
@@ -99,8 +99,8 @@ const Cartz = () => {
                     </div>
 
                     <div className='flex justify-end gap-10'>
-                        <button className='border px-2 rounded-md bg-blue-200 hover:bg-green-800 shadow-lg'>Place Order</button>
-                        <button className='border px-2 rounded-md bg-blue-200 hover:bg-red-800 shadow-lg'>Cancel</button>
+                        <button className='border px-2 rounded-md bg-blue-200 hover:bg-green-800 shadow-lg' onClick={()=>(alert("Successfully ordered!"))}>Place Order</button>
+                        <button className='border px-2 rounded-md bg-blue-200 hover:bg-red-800 shadow-lg' onClick={() => setShowCart(false)}>Cancel</button>
                     </div>
                    </div>
 

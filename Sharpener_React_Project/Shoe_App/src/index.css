@@ -17,11 +17,16 @@
   @apply   mb-28 p-7 bg-transparent  mt-10 rounded-lg border-2 flex flex-col gap-5 w-full max-w-6xl mx-auto border-x-gray-900 shadow-gray-700 shadow-inner  ;
 }
 
-/* @media :-webkit-scrollbar and (max-width: 768px) {
-  .nav {
-      @apply py-2 px-3; 
-  }
-} */
+
+.Buyer_Quantity_btn{
+  @apply border h-20 p-2 w-24  text-black bg-blue-200 hover:bg-red-800 hover:text-white rounded-lg shadow-lg
+}
+
+.Seller_Quantity_btn{
+  @apply relative left-6 w-96 max-w-16 h-16 rounded-lg my-4 text-black bg-blue-200 hover:bg-red-800 hover:text-white shadow-lg
+}
+
+
 
 
 

@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { ContextProvider } from './Components/Context';
+import { ContextProvider } from './Components/ContextAPI.js/Context';
 
 
 import './index.css';
