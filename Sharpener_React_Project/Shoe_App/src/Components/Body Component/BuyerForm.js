@@ -6,106 +6,193 @@ import { Context } from "../ContextAPI.js/Context";
 
 const BuyerForm = () => {
 
-    const { arr, setArr } = useContext(Context);
+    const { arr, setArr, cartItems, setCartItems, cartCount, setCartCount } = useContext(Context);
 
-    const handleLarge = (e, obj) => {
+    const handleLarge = (obj) => {
+
         if (obj.quantityAvailable.L > 0) {
-            obj.quantityAvailable.L = obj.quantityAvailable.L - 1;
 
-            const object = {
-                shoeName: obj.shoeName,
-                description: obj.description,
-                price: obj.price,
-                quantityAvailable: {
-                    L: obj.quantityAvailable.L,
-                    M: obj.quantityAvailable.M,
-                    S: obj.quantityAvailable.S,
-                }
+
+            obj.quantityAvailable.L = obj.quantityAvailable.L - 1;
+            obj.selected.L = obj.selected.L + 1;
+            obj.totalprice = (obj.selected.L + obj.selected.M + obj.selected.S) * parseInt(obj.price);
+
+
+            const updatedArr = arr.map(item =>
+                item.id === obj.id ?
+                    {
+                        ...item,
+                        quantityAvailable: { ...item.quantityAvailable, L: obj.quantityAvailable.L },
+                    } : item
+
+            );
+
+            setArr(updatedArr);
+
+            if (cartItems.length > 0) {
+
+                const updatedcartItems = cartItems.map(item =>
+                    item.id === obj.id ?
+                        {
+                            ...item,
+                            selected: { ...item.selected, L: obj.selected.L },
+                            totalprice: obj.totalprice
+                        } : item
+
+                );
+                setCartItems(updatedcartItems)
             }
 
 
-            setArr([...arr], object)
+            let flag = false;
+
+            for (let i = 0; i < cartItems.length; i++) {
+
+                if (cartItems.length == 0) {
+                    setCartItems([obj]);
+                    flag = true;
+                    break;
+                }
+
+                if (cartItems[i].id === obj.id) {
+                    flag = true;
 
 
+                }
+            }
+
+            if (flag === false) {
+                setCartItems([...cartItems, obj])
+            }
+            setCartCount(cartCount + 1);
         }
-
-
-
-
     }
 
 
-    const handleMedium = (e, obj) => {
-
-
-
+    const handleMedium = (obj) => {
 
         if (obj.quantityAvailable.M > 0) {
-            console.log(obj.quantityAvailable.M);
+
+
             obj.quantityAvailable.M = obj.quantityAvailable.M - 1;
-            console.log(obj.quantityAvailable.M);
+            obj.selected.M = obj.selected.M + 1;
+            obj.totalprice = (obj.selected.L + obj.selected.M + obj.selected.S) * parseInt(obj.price);
 
-            const object = {
-                shoeName: obj.shoeName,
-                description: obj.description,
-                price: obj.price,
-                quantityAvailable: {
-                    L: obj.quantityAvailable.L,
-                    M: obj.quantityAvailable.M,
-                    S: obj.quantityAvailable.S,
-                }
+
+
+            const updatedArr = arr.map(item =>
+                item.id === obj.id ?
+                    {
+                        ...item,
+                        quantityAvailable: { ...item.quantityAvailable, M: obj.quantityAvailable.M },
+                    } : item
+
+            );
+            setArr(updatedArr);
+
+            if (cartItems.length > 0) {
+
+                const updatedcartItems = cartItems.map(item =>
+                    item.id === obj.id ?
+                        {
+                            ...item,
+                            selected: { ...item.selected, M: obj.selected.M },
+                            totalprice: obj.totalprice
+                        } : item
+
+                );
+                setCartItems(updatedcartItems)
             }
 
 
-            setArr([...arr], object)
+            let flag = false;
+
+            for (let i = 0; i < cartItems.length; i++) {
+
+                if (cartItems.length == 0) {
+                    setCartItems([obj]);
+                    flag = true;
+                    break;
+                }
+
+                if (cartItems[i].id === obj.id) {
+                    flag = true;
 
 
+                }
+
+
+            }
+
+            if (flag === false) {
+                setCartItems([...cartItems, obj])
+            }
+            setCartCount(cartCount + 1);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
-    const handleSmall = (e, obj) => {
+    const handleSmall = (obj) => {
         if (obj.quantityAvailable.S > 0) {
-            obj.quantityAvailable.S = obj.quantityAvailable.S - 1;
 
-            const object = {
-                shoeName: obj.shoeName,
-                description: obj.description,
-                price: obj.price,
-                quantityAvailable: {
-                    L: obj.quantityAvailable.L,
-                    M: obj.quantityAvailable.M,
-                    S: obj.quantityAvailable.S,
-                }
+
+            obj.quantityAvailable.S = obj.quantityAvailable.S - 1;
+            obj.selected.S = obj.selected.S + 1;
+            obj.totalprice = (obj.selected.L + obj.selected.M + obj.selected.S) * parseInt(obj.price);
+
+
+
+            const updatedArr = arr.map(item =>
+                item.id === obj.id ?
+                    {
+                        ...item,
+                        quantityAvailable: { ...item.quantityAvailable, S: obj.quantityAvailable.S },
+                    } : item
+
+            );
+            setArr(updatedArr);
+
+            if (cartItems.length > 0) {
+
+                const updatedcartItems = cartItems.map(item =>
+                    item.id === obj.id ?
+                        {
+                            ...item,
+                            selected: { ...item.selected, S: obj.selected.S },
+                            totalprice: obj.totalprice
+                        } : item
+
+                );
+                setCartItems(updatedcartItems)
             }
 
 
-            setArr([...arr], object)
+            let flag = false;
+
+            for (let i = 0; i < cartItems.length; i++) {
+
+                if (cartItems.length == 0) {
+                    setCartItems([obj]);
+                    flag = true;
+                    break;
+                }
+
+                if (cartItems[i].id === obj.id) {
+                    flag = true;
 
 
+                }
+
+
+            }
+
+            if (flag === false) {
+                setCartItems([...cartItems, obj])
+            }
+            setCartCount(cartCount + 1);
         }
 
     }
-    console.log(arr);
 
 
     return <div className="SellerForm bg-blue-300 text-white  ">
@@ -136,9 +223,9 @@ const BuyerForm = () => {
 
                                 <span className="size-42 flex flex-wrap gap-3 text-center" >
 
-                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleLarge(e, ele)} > Large ({ele.quantityAvailable.L})</button>
-                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleMedium(e, ele)} > Medium ({ele.quantityAvailable.M})</button>
-                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleSmall(e, ele)} > Small ({ele.quantityAvailable.S})</button>
+                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleLarge( ele)} > Large ({ele.quantityAvailable.L})</button>
+                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleMedium( ele)} > Medium ({ele.quantityAvailable.M})</button>
+                                    <button className=" Buyer_Quantity_btn" onClick={(e) => handleSmall( ele)} > Small ({ele.quantityAvailable.S})</button>
 
 
                                 </span>

@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
+import React, { createContext, useState, useMemo } from "react";
 
 export const Context = createContext();
 
@@ -8,11 +8,8 @@ export const ContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [bill, setBill] = useState(0);
     const [cartCount, setCartCount] = useState(0);
-    const [shoeDetails, setShoeDetails] = useState({});
 
-    useEffect(() => {
-        
-    }, []);
+   
 
     const contextValue = useMemo(() => ({
         cartCount,
@@ -25,9 +22,7 @@ export const ContextProvider = ({ children }) => {
         setCartItems,
         bill,
         setBill,
-        shoeDetails,
-        setShoeDetails
-    }), [cartCount, arr, showCart, cartItems, bill, shoeDetails]);
+    }), [cartCount, arr, showCart, cartItems, bill]);
 
     return <Context.Provider value={contextValue}>
         {children}

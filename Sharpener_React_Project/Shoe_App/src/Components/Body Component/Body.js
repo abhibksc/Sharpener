@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import Cuisines from "./Cuisines";
 import SellerForm from "./SellerForm";
 import BuyerForm from "./BuyerForm";
 
@@ -24,7 +22,6 @@ const Body = () => {
             <SellerForm />
             <BuyerForm/>
 
-            {/* <Cuisines /> */}
         </main>
     );
 }
