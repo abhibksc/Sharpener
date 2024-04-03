@@ -1,7 +1,7 @@
 {
-  "name": "creating_restaurant_app",
+  "name": "shoehose",
   "version": "1.0.0",
-  "description": "swiggy clone",
+  "description": "Ecommerce App",
   "scripts": {
     "start": "parcel serve public/index.html --public-url /",
     "build": "parcel serve public/index.html --public-url /",
