@@ -4,21 +4,26 @@ import { useContext } from 'react';
 import { Context } from '../ContextAPI.js/Context';
 import Cartz from '../Cartz/Cartz';
 import Login from './Login';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     const { cartCount, setShowCart } = useContext(Context);
 
     return (
-        <nav className=" nav">
+        <nav className=" nav flex flex-wrap">
             <span className="ml-6 lg:text-4xl">🎧 <span className=" font-bold underline">Generics</span></span>
             <div className='hidden md:block'>
             <ul className='flex gap-5  '>
             {/* sm:w-[300px] group-hover:w-[500px] transition-all rounded border  */}
-                <li><a href="/">HOME</a></li>
-                <li><a href="/">STORE</a></li>
-                <li><a href="/">ABOUT</a></li>
+                <li><Link to={"/"}> HOME</Link></li>
+                <li><Link to={"/store"}> Store</Link></li>
+                <li><Link to={"/about"}> About</Link></li>
             </ul>
             </div>
+
+            
+
             <div className=' flex'>
 
                 
@@ -36,6 +41,7 @@ const Header = () => {
                 <Cartz />
                 <Login />
             </div>
+            
         </nav>
     );
 }

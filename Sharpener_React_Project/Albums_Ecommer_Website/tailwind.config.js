@@ -10,6 +10,10 @@ module.exports = {
         secondary: '#080808', 
         // Add more custom colors as needed
       },
+      fontFamily: {
+        customFont: ['"Alex Brush"', "cursive"],
+        // Add more custom font families as needed
+      },
      
       
     },

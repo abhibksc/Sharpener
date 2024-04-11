@@ -1,7 +1,7 @@
-import SellerForm from "./SellerForm";
-import BuyerForm from "./BuyerForm";
 
-import { imge1, imge2,imge3,imge4,imge5, imge6,imge7 } from "../Constants/Img";
+
+import { imge1, imge2,imge3,imge4,imge5, imge6,imge7 } from "../../Constants/Img";
+import Typewriter from 'typewriter-effect';
 
 
 
@@ -10,54 +10,25 @@ const Body = () => {
 
     return (
         <main
-            className=" border m-0 max-w-full max-h-full ">
-
+            className="bg-gradient-to-r from-primary to-secondary border m-0 max-w-full max-h-full ">
 
             <div className="">
                 <img data-aos="fade-up" className="lg:h-screen md:h-96  object-cover w-full  overflow-hidden shadow-xl   shadow-secondary  rounded-lg " src={imge1} alt="" />
             </div>
 
-
-
-
-
-
             <div data-aos="fade-up" className="shoeBlue ">
-                <h1 className="font-bold font-serif text-3xl text-yellow-400 text-opacity-100"> <span className="text-white">Music</span> Harmony  Explore Our Melodic Oasis</h1>
+                <h1 className=" font-bold font-serif text-3xl text-yellow-400 text-opacity-100 "> <span className="text-white ">Music</span> <Typewriter
+                                    options={{
+                                        strings: "Harmony  Explore Our Melodic Oasis",
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                /></h1>
                 <button className="bg-black p-3 rounded-full w-[150px] mx-auto hover:scale-90 duration-300">Explore Now</button>
             </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div>
-
-
-
-
-
                 <div data-aos="fade-up" className="rounded-md max-w-[1100px] mx-auto shadow-md    focus:border-1 flex lg:relative bottom-28  lg:flex-row  
                 justify-between w-full    p-2  ">
 
@@ -68,7 +39,6 @@ const Body = () => {
 
                         <button className="bg-black p-3 rounded-full w-[150px]  hover:scale-90 duration-300">Explore Now</button>
 
-
                     </div>
 
                     <div className="">
@@ -77,8 +47,6 @@ const Body = () => {
 
 
                 </div>
-
-
 
 
 

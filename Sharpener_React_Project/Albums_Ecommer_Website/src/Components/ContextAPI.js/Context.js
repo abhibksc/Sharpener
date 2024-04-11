@@ -8,6 +8,7 @@ export const ContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [bill, setBill] = useState(0);
     const [cartCount, setCartCount] = useState(0);
+    const [NavBelow, setNavBelow] = useState("white");
 
    
 
@@ -22,7 +23,8 @@ export const ContextProvider = ({ children }) => {
         setCartItems,
         bill,
         setBill,
-    }), [cartCount, arr, showCart, cartItems, bill]);
+        NavBelow, setNavBelow
+    }), [cartCount, NavBelow,arr, showCart, cartItems, bill]);
 
     return <Context.Provider value={contextValue}>
         {children}
