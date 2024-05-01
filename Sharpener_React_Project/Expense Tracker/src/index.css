@@ -9,7 +9,7 @@
 }
 
 .signup_div_form{
-  @apply  text-white   fixed left-[180px] top-[370px] w-[330px] h-[560px] md:h-[550px]   md:bg-transparent md:top-80 md:left-[650px] p-3 transform -translate-x-1/2 -translate-y-1/2 my-auto md:w-screen   md:max-w-96 rounded-lg   ;
+  @apply  text-white   fixed left-[180px] top-[370px] w-[330px] h-[560px] md:h-[570px]   md:bg-transparent md:top-80 md:left-[650px] p-3 transform -translate-x-1/2 -translate-y-1/2 my-auto md:w-screen   md:max-w-96 rounded-lg   ;
 }
 
 .sign_up_btn{
