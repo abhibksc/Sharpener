@@ -5,6 +5,8 @@ import GetExpense from "./GetExpense";
 const PostExpense = async (payload) => {
     const { amount, description, category, userId } = payload;
 
+
+
     let response = await fetch(`${DbUrl}${userId}.json`,
         {
             method: "POST",

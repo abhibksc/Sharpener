@@ -15,6 +15,7 @@ const GetExpense = async (userId) => {
                 arr.push(data[key]);
             }
             arr = arr.reverse();
+            console.log(arr);
             return arr;
 
     }

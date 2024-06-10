@@ -6,9 +6,22 @@ import { store_img_1, store_img_2, store_img_3, store_img_4, store_img_5, store_
 import Typewriter from 'typewriter-effect';
 
 
+
 const AboutUs = () => {
+
+
+}
+
+
+
     return <div className="bg-gradient-to-r from-yellow-50 to-secondary">
         <div className="relative top-40 bg-gradient-to-r from-yellow-50 to-secondary">
+
+   
+
+
+
+
 
 
 
